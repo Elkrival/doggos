@@ -184,7 +184,8 @@ When we think of utility functions we think of how we will be doing the spacing 
     border-radius: 2px;
     position: absolute;
     z-index: 10;
-    transition: all .2s; }
+    transition: all .2s;
+    outline-offset: 2rem; }
     .composition__photo--p1 {
       left: 20rem;
       top: -6rem; }
@@ -195,9 +196,12 @@ When we think of utility functions we think of how we will be doing the spacing 
       left: 35%;
       top: 10rem; }
     .composition__photo:hover {
-      transform: scale(1.05);
+      outline: 1.5rem solid #FF7043;
+      transform: scale(1.05) translateY(0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.8); }
 
 /*
 We need to define a width for a row, using an 1140px width  we need to set this rems.
