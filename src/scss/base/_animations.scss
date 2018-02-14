@@ -2,11 +2,14 @@
 
  0%{
   opacity: 0;
-  transform: translateX(-10rem) rotate3d(2, -2, -1, 1, 120deg) rotate(21deg);
+  transform: translateX(-10rem);
+   // rotate3d(2, -2, -1, 1, 120deg) rotate(21deg);
  }
- 60%{
-  transform:rotate(120deg) rotate3d(1, .5, .2 270deg);;/* deg is used for rations*/
- }
+ // 60%{
+ //  transform:
+ //  // rotate(120deg)
+ //   // rotate3d(1, .5, .2 270deg);;/* deg is used for rations*/
+ // }
  80%{
   transform: translateX(1rem) rotate3d(1, .6, 3, 360deg);
  }

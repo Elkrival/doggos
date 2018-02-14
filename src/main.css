@@ -9,10 +9,7 @@ we use empty content, and display as table but the icing on the cake is the clea
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem) rotate3d(2, -2, -1, 1, 120deg) rotate(21deg); }
-  60% {
-    transform: rotate(120deg) rotate3d(1, 0.5, 0.2 270deg);
-    /* deg is used for rations*/ }
+    transform: translateX(-10rem); }
   80% {
     transform: translateX(1rem) rotate3d(1, 0.6, 3, 360deg); }
   100% {
