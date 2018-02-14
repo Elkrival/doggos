@@ -21,8 +21,8 @@ const Header = () =>{
      </div>
     <div className="header__text-box">
     <h1 className="heading-primary">
-     <span className="heading-primary--main">Furry Friends </span>
-     <span className="heading-primary--sub">Our favorite companion!</span>
+     <span className="heading-primary--main">Dogs </span>
+     <span className="heading-primary--sub">Our companion!</span>
     </h1>
      <a href="#here" className="btn btn--white btn--animated">To Infinity and Beyond &rArr;	</a>
     </div>
