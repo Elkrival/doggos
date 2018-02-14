@@ -1,0 +1,7 @@
+.section-about{
+ background-color: $color-grey-light-1;
+ padding:25rem 0rem;
+// on our page we have a break between the header and main component we need to fill that break we make our equations.
+// The heading is 95vh and the polygon cut is 75vh therefore 95-75 is 20vh that we need to account for
+ margin-top: -20vh;
+}

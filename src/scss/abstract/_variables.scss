@@ -1,0 +1,18 @@
+// Colors
+$color-primary:#FF7043;
+$color-primary-light:#FFAB91;
+$color-primary-dark:#FF5722;
+$color-white:#fff;
+$color-grey-dark:#777;
+$color-black:#000;
+
+$color-grey-light-1: #f7f7f7;
+
+// Grid
+$grid-width:114rem;
+$gutter-vertical:8rem;
+$gutter-horizontal:6rem;
+
+
+// Font  It is a good idea to set up a universal font-size this is important because if a client wants to change the size of the font it is easier for us to send it them
+$default-font-size:1.6rem;

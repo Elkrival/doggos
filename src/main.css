@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+/*-------- Clear Fix --------
+When an item is floated it loses it's height this is where we implement ClearFix for floats we will be using this as a mixin and using it where appropriate. Unlike an extend this is code that can be used by multiple elements, where as Extend is the foundation of the element prior to it's states that may change it.
+
+To use clearfix we call the mixin and we alter the pseudo class of the float element
+
+we use empty content, and display as table but the icing on the cake is the clear:both
+*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem) rotate3d(2, -2, -1, 1, 120deg) rotate(21deg); }
+  60% {
+    transform: rotate(120deg) rotate3d(1, 0.5, 0.2 270deg);
+    /* deg is used for rations*/ }
+  80% {
+    transform: translateX(1rem) rotate3d(1, 0.6, 3, 360deg); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInButtonBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #FFAB91, #FF5722);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(last-child) {
+    margin-bottom: 3rem; }
+
+/*    These classes are only used for a specific task they are a great tool
+
+When we think of utility functions we think of how we will be doing the spacing we don't want to hardcode the the pixels in there already we want to instead name them differently
+
+*/
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff;
+    color: #777; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--animated {
+  animation: moveInButtonBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #FF7043;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #FF7043;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #FF7043;
+  color: #fff;
+  box-shadow: -1rem 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: -1rem 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute; }
+    .composition__photo--p1 {
+      left: 20rem;
+      top: -7rem; }
+    .composition__photo--p2 {
+      right: 50%;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 50%;
+      top: 10rem; }
+
+/*
+We need to define a width for a row, using an 1140px width  we need to set this rems.
+
+max-width: If there's available space to supply the correct width specified by Rem it will do it, otherwise if the viewport does not have the available width it will instead fill 100% of the viewport width
+
+To center an element inside a block element we use the margin: 0 auto trick
+
+Our rows should have space for our layout Naturally we need some space
+because this value like max width and margin bottom are candidates to be variables.
+
+As the project progresses we will be using these variables over and over again
+
+The last child we cannot have a margin at the bottom for layout specificiations
+
+.not() we need to use this to specify a pseudo class such as last child or the last row element we select everything except the last child. Therefore styles such as margin-bottom will work on everything EXCEPT the last child.
+
+----------Columns---------
+Because our columns are inside our rows we can nest the columns inside our row selector
+
+We have to make an equation for the columns
+for example our first row we have two columns with a gutter in the middle.
+
+We take the entire width of the row then we subtract the gutter, then that value gets divided by 2
+
+max-width - gutter / 2 for the width of one column
+
+------- calc() --------
+
+This function allows us to make calculations where we can mix units. Css and Sass all have the ability to make calculations but they are specific to the units we cannot mix them.
+
+The importance of using calc() in the layout is the ability of doing these calculations before the page is rendered it is only then when css and the browser knows what the correct measurements are.
+
+We must use order of operations for our calculations
+
+special note:
+
+To use a variable with the calc() function we must interpolate it by using variable
+
+In order to not have gutters with addtional widths we must reset the margin of the last child
+
+When an item is floated it loses it's height this is where we implement ClearFix
+
+Because our columns will be different yet similar whatever pieces of code that we can reuse and not retype is ideal.
+
+We will use our attributes property to apply the
+&:not(:last-child){
+ margin-right: $gutter-horizontal
+}
+to all columns
+
+To use attributes we apply the [] inside the brackets we can alter the attributes that we want such as src for images href for anchors or like we are using it now it's for classes. Inside the brackets we can use other symbos such as ^ which means it will match the beginning that we specify.
+
+What this will do is select all of the elements that start with the col- class name, this is how we select all of the items at the same time.
+
+* means to select all of the classes that match col-
+
+When we set up our attributes inside our brackets we use clojures to then speicify the styles that should match the attribute we have selected.
+
+*/
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2/* 100% is the width of the row, 2 is the number of gutters, gutter horizontal is the size of the gutter and the 3 is the number of columns we have on that row*/ * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * (( 100% - 3 * 6rem) / 4 ) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * (( 100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+
+/* To use BEM to it's full advantage with Sass and nesting we can use the & operator to copy the part of the overarching parent class. for example header is our class for the top page, therefore to nest we would do the following
+ .header{
+  &__logo-box{
+    position: absolute;
+    top:4rem;
+    left:4rem;
+   }
+ }
+ the & copies only the header portion before the clojure and adds it to the the nesting lines
+
+*/
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(255, 171, 145, 0.8), rgba(255, 87, 34, 0.8)), url(./img/dog_hero.jpeg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 15rem;
+    filter: invert(95%); }
+  .header__logo:hover {
+    animation: moveInLeft .5s ease-out; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0rem;
+  margin-top: -20vh; }

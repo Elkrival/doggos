@@ -1,0 +1,25 @@
+// Components are elements that follow BEM strategy
+.composition{
+ position:relative;
+ &__photo{
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+  border-radius: 2px;
+  position: absolute;
+  //Because we are using an absolute positioning on the images we need to set a reference, to do so we use position:relative usually on the parent element
+  &--p1{
+   left:20rem;
+   top:-7rem;
+
+  }
+  &--p2{
+   right:50%;
+   top:2rem;
+   }
+  &--p3{
+   left:50%;
+   top:10rem;
+  }
+ }
+
+}

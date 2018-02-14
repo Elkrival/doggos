@@ -1,0 +1,16 @@
+/*-------- Clear Fix --------
+When an item is floated it loses it's height this is where we implement ClearFix for floats we will be using this as a mixin and using it where appropriate. Unlike an extend this is code that can be used by multiple elements, where as Extend is the foundation of the element prior to it's states that may change it.
+
+To use clearfix we call the mixin and we alter the pseudo class of the float element
+
+we use empty content, and display as table but the icing on the cake is the clear:both
+*/
+
+
+@mixin clearFix{
+ &::after{
+  content:"";
+  display: table;
+  clear: both;
+ }
+}

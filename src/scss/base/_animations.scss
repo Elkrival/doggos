@@ -1,0 +1,40 @@
+@keyframes moveInLeft {
+
+ 0%{
+  opacity: 0;
+  transform: translateX(-10rem) rotate3d(2, -2, -1, 1, 120deg) rotate(21deg);
+ }
+ 60%{
+  transform:rotate(120deg) rotate3d(1, .5, .2 270deg);;/* deg is used for rations*/
+ }
+ 80%{
+  transform: translateX(1rem) rotate3d(1, .6, 3, 360deg);
+ }
+ 100%{
+  opacity: 1;
+  transform: translate(0);
+ }
+}
+@keyframes moveInRight {
+ 0%{
+  opacity: 0;
+  transform: translateX(100%);
+ }
+ 80%{
+  transform: translateX(-1rem);
+ }
+ 100%{
+  opacity: 1;
+  transform: translateX(0);
+ }
+}
+@keyframes moveInButtonBottom {
+ 0%{
+  opacity: 0;
+  transform: translateY(3rem);
+ }
+ 100%{
+  opacity: 1;
+  transform: translateY(0);
+ }
+}

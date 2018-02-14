@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before{
+ margin:0;
+ padding:0;
+ box-sizing:inherit;
+}
+html{
+ font-size: 62.5%;
+//This line is necessary to use rem for font sizes by setting the universal size of the font to 10px for easier measurement
+}
+body{
+ box-sizing: border-box;
+}
