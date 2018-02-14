@@ -6,10 +6,14 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
   border-radius: 2px;
   position: absolute;
+  z-index: 10;
   //Because we are using an absolute positioning on the images we need to set a reference, to do so we use position:relative usually on the parent element
+  transition: all .2s;
+  // ------ REsponsive web design-----
+ // Ideal to use % to adapt to the page
   &--p1{
    left:20rem;
-   top:-7rem;
+   top:-6rem;
 
   }
   &--p2{
@@ -17,8 +21,16 @@
    top:2rem;
    }
   &--p3{
-   left:50%;
+   left:35%;
    top:10rem;
+  }
+  &:hover{
+   transform: scale(1.05);
+   box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+   // When an item is scaled it should cast a bigger shadow we need to increase the box shadow
+   z-index: 20;
+  // to set images on top of each other we use z-index
+
   }
  }
 
