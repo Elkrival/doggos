@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.377db6fb.css",
-  "main.css.map": "static/css/main.377db6fb.css.map",
-  "main.js": "static/js/main.e4d8fbd4.js",
-  "main.js.map": "static/js/main.e4d8fbd4.js.map",
+  "main.css": "static/css/main.4c2a17f4.css",
+  "main.css.map": "static/css/main.4c2a17f4.css.map",
+  "main.js": "static/js/main.a5056349.js",
+  "main.js.map": "static/js/main.a5056349.js.map",
   "static/media/chihuahua.png": "static/media/chihuahua.d51709be.png",
   "static/media/dog_hero.jpeg": "static/media/dog_hero.63c1fa86.jpeg",
   "static/media/doggo-1.jpeg": "static/media/doggo-1.47c70f15.jpeg",
@@ -15,5 +15,9 @@
   "static/media/nat-4.jpg": "static/media/nat-4.61bbf12a.jpg",
   "static/media/nat-5.jpg": "static/media/nat-5.19f9a22f.jpg",
   "static/media/nat-6.jpg": "static/media/nat-6.1ef6d764.jpg",
-  "static/media/nat-7.jpg": "static/media/nat-7.5f846d16.jpg"
+  "static/media/nat-7.jpg": "static/media/nat-7.5f846d16.jpg",
+  "static/media/nat-8.jpg": "static/media/nat-8.14efd82b.jpg",
+  "static/media/nat-9.jpg": "static/media/nat-9.b525a99b.jpg",
+  "static/media/video.mp4": "static/media/video.ffcd876c.mp4",
+  "static/media/video.webm": "static/media/video.f556a2c3.webm"
 }
