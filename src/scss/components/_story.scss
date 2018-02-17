@@ -1,0 +1,61 @@
+.story{
+ width:75%;
+ margin: 0 auto;
+ box-shadow: 0 3rem 6rem rgba($color-black, .1);
+ background-color: rgba($color-white, .6);
+ border-radius: 3px;
+ padding: 6rem;
+ padding-left: 9rem;
+ font-size: $default-font-size;
+ transform: skewX(-12deg);
+ // we are not using clippath for this instead we are using the transform property for the container with the skeyX values, we will run into the same problem of the rest of the items also skewing with the container, -------- However because we already have the shape with a transform proeprty the skew will only work with the text not the image, therefore, cannot use & > * the direct child selector, we use the skew property individually in the child that need.
+ &__shape{
+  width:15rem;
+  height:15rem;
+  background-color: $color-primary;
+  float:left;
+  border-radius: 50%;
+  // We use float on this element to get the text to flow around the box
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  // The shape outside property needs to be floated and it must have a defined height and width property. This will give the outside text the deimensions of how it should wrap around. it gives the content flow
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+ // to add space to an element that is floated is to use translate and not padding or margin. we use transform then translate
+  transform: translateX(-3rem) skewX(12deg);
+  position: relative;
+  overflow: hidden;
+ }
+  &__img{
+   height: 100%;
+  // The image width is larger than the circle and does not need to be offset, instead we need to relate it to it's height so that it fits properly in the dimensions of the container in which we have defined
+   transform: translateX(-4rem) scale(1.3);
+   transition: all .3s;
+   backface-visibility: hidden;
+  }
+// Flexible images for responsive web design always need a width
+ &__text{
+  transform: skewX(12deg);
+ }
+ &__caption{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, 20%);
+  color: $color-white;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+  // backface-visibility: hidden;
+ }
+ &:hover &__caption{
+  opacity:1;
+  transform: translate(-50%, -50%);
+ }
+ &:hover &__img{
+  transform:translateX(-4rem) scale(1);
+  filter: blur(4px) brightness(70%);
+ }
+}

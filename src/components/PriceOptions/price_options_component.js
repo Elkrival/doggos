@@ -106,7 +106,7 @@ const PriceOptions = () =>{
      </div>
       </div>
    </div>
-   <div className="u-center-text u-margin-top-big">
+   <div className="u-center-text u-margin-top-huge">
     <a href="#tours" className="btn btn--green">Discover All Tours</a>
    </div>
   </section>
