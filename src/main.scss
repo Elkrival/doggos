@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
-
+@import "./fonts/icon-font";
 @import "./scss/abstract/functions";
 @import "./scss/abstract/mixins";
 @import "./scss/abstract/variables";
@@ -11,6 +11,8 @@
 
 @import "./scss/components/button";
 @import "./scss/components/composition";
+@import "./scss/components/feature-box";
+@import "./scss/components/card";
 
 @import "./scss/layout/grid";
 @import "./scss/layout/header";

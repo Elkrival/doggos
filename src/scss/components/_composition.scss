@@ -38,6 +38,7 @@
 
  }
  &:hover &__photo:not(:hover){
+//composition:hover composition__photo:not(:hover) is what it translates to
   // What this does is it allows us to select different elements that are not in that hover state
   transform:scale(.8);
  }
