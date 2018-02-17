@@ -549,6 +549,9 @@ When we think of utility functions we think of how we will be doing the spacing 
 .u-margin-bottom-medium {
   margin-bottom: 4rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -576,6 +579,13 @@ When we think of utility functions we think of how we will be doing the spacing 
   .btn--white::after {
     background-color: #fff;
     color: #777; }
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #fff;
+    color: #fff; }
 
 .btn::after {
   content: "";
@@ -708,13 +718,18 @@ When we think of utility functions we think of how we will be doing the spacing 
     position: absolute;
     top: 12rem;
     right: 2rem;
-    width: 50%; }
+    width: 75%;
+    z-index: 1; }
   .card__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -724,13 +739,30 @@ When we think of utility functions we think of how we will be doing the spacing 
     .card__details li {
       text-align: center;
       font-size: 1.5rem;
-      padding: 1rem; }
+      padding: 1rem;
+      /*
+ To apply the heading style we need to add the text-decoration break to do that we need to nest another elemtn which is the heading span
+*/ }
       .card__details li:not(:last-child) {
         border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: #fff; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 400; }
 
-/*
- To apply the heading style we need to add the text-decoration break to do that we need to nest another elemtn which is the heading span
-*/
 /*
 We need to define a width for a row, using an 1140px width  we need to set this rems.
 

@@ -30,6 +30,14 @@
    color:$color-grey-dark;
   }
  }
+ &--green{
+  background-color: $color-secondary-light;
+  color:$color-white;
+  &::after{
+   background-color: $color-white;
+   color:$color-white;
+  }
+ }
  &::after{
   content: "";
   display: inline-block;
