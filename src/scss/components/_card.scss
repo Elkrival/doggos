@@ -15,7 +15,7 @@
    width:100%;
    backface-visibility: hidden;
    // the backface visibility it hides the backpart of the element
-   border-radius: 3px;
+   border-radius: $small-border-radius;
    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
    overflow: hidden;
    &--front{

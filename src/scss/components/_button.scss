@@ -1,5 +1,7 @@
 .btn{
+ &,
  &:link,
+ // a <button> element does not have the states of link and visited therefore applying these styles to the button will not override them. Instead we just use & and it will apply the styles
  &:visited{
   text-transform: uppercase;
   text-decoration: none;
@@ -9,7 +11,12 @@
   transition: all .2s;
   position: relative;
   font-size: $default-font-size;
+
+  // Change for the <button> element
+  border:none;
+  cursor:pointer;
  }
+
  &:hover{
   transform: translateY(-.3rem);
   box-shadow: 0 1rem 2rem rgba($color-black,.2);
@@ -18,7 +25,10 @@
    opacity: 0;
   }
  }
- &:active{
+ &:active,
+ &:focus{
+  outline:none;
+  // A button also has a focus property when it is selected, it is not good practice to remove it outright due to accessbility users, instead we remove the outline on all of our animations, on the active state.
   transform:translateY(-.1rem);
   box-shadow: 0 .5rem 1rem rgba($color-black,.2)
  }

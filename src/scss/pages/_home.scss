@@ -37,3 +37,32 @@
  position:relative;
 
 }
+.section-booking{
+ padding: 15rem 0;
+ background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+.book{
+ background-image: linear-gradient(
+  105deg,
+   rgba($color-white, .9)0%,
+   rgba($color-white, .9)50%,
+   transparent 50%),
+   url(img/nat-10.jpg);
+// solid color gradient, it's a gradient that can be broken up into smaller pieces
+/*
+          ------ linear-gradient ----------
+      We can specify a gradient with a direction and a color at it's most useful, but we can also make the gradient cut into an angle, and it rotates the gradent, we can add an angle the x direction. If we put the values where we apply the full depth of the color we don't get the computed value for the transition of one color to the other. We might but it's a small calc.
+
+     For this example we will be using transparent for the absense of color gradient
+
+*/
+ background-size: 100%;
+ border-radius: $small-border-radius;
+ box-shadow: 0 3rem 4rem rgba($color-black, .2);
+ // because this is used throughout the code we can make this into a variable
+ height: 50rem;
+ &__form{
+  width: 50%;
+  padding: 6rem;
+ }
+}

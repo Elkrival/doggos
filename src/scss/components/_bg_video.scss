@@ -6,7 +6,9 @@
  width:100%;
  z-index: -1;
  opacity: .55;
-// Because the width is 100% the video still overflows our screen, therefore, we must use a different type of selector to be able to put it within the confines of the image. To do that we use the content with the object fit property. it is similar to the object fit cover will fill the entire parent while still maintingin it's aspect ratio, and the parts that don't fit will be clipped
+ overflow: hidden;
+// Because the width is 100% the video still overflows our screen, therefore, we must use a different type of selector to be able to put it within the confines of the image. To do that we use the content with the object fit property. it is similar to the object fit cover will fill the entire parent while still maintingin it's aspect ratio, and the parts that don't fit will be clipped.
+// Finally we use oveflow hidden to clip the edges
  &__content{
   height:100%;
   width:100%;
