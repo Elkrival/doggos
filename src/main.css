@@ -939,6 +939,7 @@ When we think of utility functions we think of how we will be doing the spacing 
     border-radius: 3px;
     display: table;
     overflow: hidden;
+    opacity: 0;
     transform: translate(-50%, -50%) scale(0);
     transition: all .4s .2s; }
   .popup__left {
