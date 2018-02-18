@@ -7,11 +7,13 @@ import Stories from './components/Stories/stories_component'
 import Booking from './components/Booking/booking_component'
 import Footer from './components/Footer/footer_component'
 import Navigation from './components/Navigation/navigation_component'
+import BookingPopUp from './components/BookingPopUp/booking_pop_up_component'
 
 class App extends Component {
   render() {
     return (
      <div>
+     <Navigation />
      <Header />
      <main>
       <About />
@@ -21,6 +23,7 @@ class App extends Component {
       <Booking />
      </main>
       <Footer />
+    <BookingPopUp />
     </div>
     );
   }

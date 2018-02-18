@@ -2,7 +2,7 @@ import React from 'react'
 
 const PriceOptions = () =>{
  return(
-  <section className="section-tours">
+  <section className="section-tours" id="section-tours">
    <div className="u-center-text u-margin-bottom-big">
     <h2 className="heading-secondary">
      They will join you
@@ -40,7 +40,7 @@ const PriceOptions = () =>{
            $297
           </p>
         </div>
-        <a href="#back" className="btn btn--white">Book Now</a>
+        <a href="#popup" className="btn btn--white">Book Now</a>
        </div>
       </div>
      </div>
@@ -70,7 +70,7 @@ const PriceOptions = () =>{
           <p className="card__price-only">Only</p>
            <p className="card__price-value">$497</p>
          </div>
-         <a href="#ack" className="btn btn--white">Book Now</a>
+         <a href="#popup" className="btn btn--white">Book Now</a>
         </div>
       </div>
      </div>
@@ -100,7 +100,7 @@ const PriceOptions = () =>{
         <p className="card__price-only">Only</p>
         <p className="card__price-value">$897</p>
        </div>
-        <a href="#forward" className="btn btn--white">Book Now!</a>
+        <a href="#popup" className="btn btn--white">Book Now!</a>
        </div>
       </div>
      </div>

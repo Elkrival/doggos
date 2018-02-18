@@ -14,3 +14,9 @@ we use empty content, and display as table but the icing on the cake is the clea
   clear: both;
  }
 }
+@mixin centerPosition{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%, -50%);
+}

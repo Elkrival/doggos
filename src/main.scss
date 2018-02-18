@@ -16,9 +16,12 @@
 @import "./scss/components/story";
 @import "./scss/components/bg_video";
 @import "./scss/components/_form.scss";
+@import "./scss/components/popup";
 // The form component is interesting because it is a component that can be reusable like the button
 @import "./scss/layout/grid";
 @import "./scss/layout/header";
 @import "./scss/layout/footer";
+@import "./scss/layout/navigation";
+
 
 @import "./scss/pages/home";

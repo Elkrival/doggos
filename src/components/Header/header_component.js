@@ -21,10 +21,10 @@ const Header = () =>{
      </div>
     <div className="header__text-box">
     <h1 className="heading-primary">
-     <span className="heading-primary--main">Dogs </span>
-     <span className="heading-primary--sub">Our companion!</span>
+     <span className="heading-primary--main">Outdoors </span>
+     <span className="heading-primary--sub">is where life happens!</span>
     </h1>
-     <a href="#here" className="btn btn--white btn--animated">To Infinity and Beyond &rArr;	</a>
+     <a href="#section-tours" className="btn btn--white btn--animated">To Infinity and Beyond &rArr;	</a>
     </div>
    </header>
    // <section className="grid-test">
